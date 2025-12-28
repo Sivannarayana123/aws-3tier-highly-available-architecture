@@ -11,6 +11,7 @@ The objective of this project is to understand how real-world production applica
 3. Database Layer
 
 **Architecture Overview:**
+
 ![AWS 3-Tier Architecture Diagram](Project_overview.png)
 
 
