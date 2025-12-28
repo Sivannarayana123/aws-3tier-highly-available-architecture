@@ -45,27 +45,27 @@ The objective of this project is to understand how real-world production applica
 
 **Step-by-Step Implementation :**
 
-****Step 1:** Create a Custom VPC**
+  ****Step 1:** Create a Custom VPC**
 - Created a dedicated VPC with a private IP range (CIDR block).
 - Enabled DNS resolution and DNS hostnames.
  
-**Purpose:**
-Provides network isolation and full control over traffic flow.
+  **Purpose:**
+  Provides network isolation and full control over traffic flow.
 
 ****Step 2:** Create Public and Private Subnets**
 - Public subnets for the Load Balancer.
 - Private subnets for EC2 instances and the database.
 - Subnets distributed across multiple Availability Zones.
  
-**Purpose:**
-Improves fault tolerance and availability.
+  **Purpose:**
+  Improves fault tolerance and availability.
 
 **Step 3: Configure Internet Gateway and NAT Gateway**
 - Internet Gateway attached to the VPC for public access.
 - NAT Gateway configured to allow private instances outbound internet access.
 
-**Purpose:**
-Keeps backend resources private while allowing required updates.
+  **Purpose:**
+  Keeps backend resources private while allowing required updates.
 
 **Step 4: Configure Route Tables**
 
@@ -78,8 +78,8 @@ Keeps backend resources private while allowing required updates.
 - Application Security Group: allows traffic only from the Load Balancer.
 - Database Security Group: allows traffic only from application instances.
 
-**Security Principle:**
-Least privilege access.
+  **Security Principle:**
+  Least privilege access.
 
 **Step 6: Launch EC2 Instances**
 
@@ -93,8 +93,8 @@ Least privilege access.
 - Target group configured with EC2 instances.
 - Health checks enabled.
 
-**Purpose:**
-Distributes traffic and ensures only healthy instances receive requests.
+  **Purpose:**
+  Distributes traffic and ensures only healthy instances receive requests.
 
 **Step 8: Configure Auto Scaling Group**
 
@@ -102,8 +102,8 @@ Distributes traffic and ensures only healthy instances receive requests.
 - Defined minimum, desired, and maximum capacity.
 - Enabled automatic instance replacement.
 
-**Purpose:**
-Provides scalability and self-healing.
+  **Purpose:**
+  Provides scalability and self-healing.
 
 **Step 9: Setup Amazon RDS (Multi-AZ)**
 
